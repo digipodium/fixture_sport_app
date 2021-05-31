@@ -1,0 +1,5 @@
+django
+olefile
+pytz
+pillow
+django-simpleui
