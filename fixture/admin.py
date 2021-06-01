@@ -5,7 +5,7 @@ import math
 from datetime import timedelta
 from django.contrib import messages
 
-
+admin.site.site_header = 'Fixture Sports login'
 # Register your models here.
 def generate_schedules(modeladmin, request, queryset):
     for fixture in queryset:

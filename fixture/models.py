@@ -6,7 +6,7 @@ from django.core.validators import MinValueValidator
 
 class Fixture(models.Model):
     pub_date = models.DateTimeField('date published', null=True)
-    icon = models.ImageField(upload_to='static/icons',verbose_name='image',)
+    icon = models.ImageField(upload_to='icons',verbose_name='image',)
     name = models.CharField(max_length=256)
     description = models.TextField(blank=True, default='', null=True)
     rounds = models.IntegerField(default=0)
