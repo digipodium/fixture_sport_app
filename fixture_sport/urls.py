@@ -26,4 +26,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index, name='index'),
     path('fixture/',include('fixture.urls')),
+    path('team/fixture/',include('team_fixture.urls')),
 ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
