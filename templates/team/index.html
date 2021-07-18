@@ -1,15 +1,12 @@
-{%extends '../layout.html' %} {% load static %} {% block content %}
-
-
-
+{% extends '../layout.html' %} {% load static %} {% block content %}
 <div class="header-content">
     <div class="header-content-inner">
-        <h1 id="homeHeading">Single Player Tournaments</h1>
+        <h1 id="homeHeading">Teams Tournaments</h1>
     </div>
 </div>
 <hr/>
 <div class="inner-bg">
-    <h4>Fixtures</h4>
+    <h4>Team Fixtures</h4>
     <div class="row">
         <div class="view-panel">
             <div class="row">
@@ -19,7 +16,7 @@
                 </div>
                 {% endif %} {% for fixture in fixture_list %}
                 <div class="col-md-6 col-sm-6">
-                    <a href="/fixture/{{fixture.id}}">
+                    <a href="{% url 'team_fixture' fixture.id %}">
                         <div class="service-box">
                             <img src="{{fixture.icon.url}}" alt="fixture" class="" height="120" />
                             <h4 class="">{{fixture.name}}</h4>
@@ -33,7 +30,7 @@
     </div>
 </div>
 <div class="row inner-bg">
-    <h4>Matches</h4>
+    <h4>Teams Matches</h4>
     <div class="view-panel">
         <div class="row">
             {% if not match_list %}
@@ -73,7 +70,7 @@
             <div class="col-12 ">
                 <div class="jumbo" role="alert">
                     <div class="btn btn-danger">
-                        <strong>Add Tournaments!</strong> <a href="{% url 'admin:index' %}" class="alert-link">ADMIN</a>
+                        <a href="{% url 'admin:index' %}" class="alert-link"></a><strong>Add Team Tournaments!</strong></a>
                     </div>
                 </div>
             </div>

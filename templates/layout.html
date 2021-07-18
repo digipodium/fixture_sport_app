@@ -18,6 +18,12 @@
 </head>
 
 <body>
+    <nav class="nav justify-content-center p-5">
+        <a class="nav-link active btn btn-lg btn-light" href="{% url 'admin:index' %}">Admin</a>
+        <a class="nav-link btn btn-lg btn-light" href="{% url 'team_index' %}">Team Tournaments</a>
+        <a class="nav-link  btn btn-lg btn-light" href="{% url 'index' %}">Single Tournaments</a>
+      </nav>
+      <h3><b>Fixture Sports </b></h3>
     <div class="top-content">
         <div class="inner-bg">
             {% block breadcrumbs %}

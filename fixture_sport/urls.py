@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from fixture.views import index
+from team_fixture.views import index as idx
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -26,5 +27,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index, name='index'),
     path('fixture/',include('fixture.urls')),
+    path('team/',idx, name='team_index'),
     path('team/fixture/',include('team_fixture.urls')),
 ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
